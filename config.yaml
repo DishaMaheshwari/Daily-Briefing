@@ -1,0 +1,71 @@
+# Daily Briefing configuration.
+# Add or remove feeds freely: any RSS/Atom URL works.
+
+timezone: Asia/Kolkata
+lookback_hours: 26            # a little over 24h so nothing slips between runs
+stories_per_category: 5
+candidates_per_category: 25
+
+categories:
+  - name: India
+    feeds:
+      - https://www.thehindu.com/news/national/feeder/default.rss
+      - https://indianexpress.com/section/india/feed/
+      - https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms
+      - https://feeds.feedburner.com/ndtvnews-india-news
+      - https://www.livemint.com/rss/news
+
+  - name: Politics
+    feeds:
+      - https://indianexpress.com/section/political-pulse/feed/
+      - https://www.thehindu.com/news/national/feeder/default.rss
+      - https://feeds.bbci.co.uk/news/politics/rss.xml
+      - https://www.theguardian.com/politics/rss
+
+  - name: Geopolitics & World
+    feeds:
+      - https://feeds.bbci.co.uk/news/world/rss.xml
+      - https://www.aljazeera.com/xml/rss/all.xml
+      - https://rss.dw.com/rdf/rss-en-world
+      - https://www.theguardian.com/world/rss
+      - https://www.thehindu.com/news/international/feeder/default.rss
+
+  - name: Protests & Society
+    feeds:
+      - https://www.theguardian.com/news/series/protest/rss
+      - https://www.aljazeera.com/xml/rss/all.xml
+      - https://scroll.in/feeds/all.rss
+      - https://www.thehindu.com/news/national/feeder/default.rss
+
+  - name: AI & Tech
+    feeds:
+      - https://www.technologyreview.com/topic/artificial-intelligence/feed
+      - https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+      - https://techcrunch.com/category/artificial-intelligence/feed/
+      - https://huggingface.co/blog/feed.xml
+      - https://feeds.arstechnica.com/arstechnica/technology-lab
+
+  - name: Environment & Climate
+    feeds:
+      - https://india.mongabay.com/feed/
+      - https://www.downtoearth.org.in/rss/all
+      - https://www.theguardian.com/environment/rss
+      - https://www.carbonbrief.org/feed/
+
+  - name: Business & Economy
+    feeds:
+      - https://www.livemint.com/rss/economy
+      - https://economictimes.indiatimes.com/rssfeedstopstories.cms
+      - https://feeds.bbci.co.uk/news/business/rss.xml
+
+# YouTube channels (the script reads each channel's public RSS feed).
+# channel_id starts with "UC". To find one: open the channel -> About -> Share -> Copy channel ID,
+# or view page source and search for "channelId". Please verify these IDs once.
+video_channels:
+  - { name: Al Jazeera English, channel_id: UCNye-wNBqNL5ZzHSJj3l8Bg }
+  - { name: DW News,            channel_id: UCknLrEdhRCp1aegoMqRaCZg }
+  - { name: BBC News,           channel_id: UC16niRr50-MSBwiO3YDb3RA }
+  - { name: WION,               channel_id: UC_gUM8rL-Lrg6O3adPW9K1g }
+  - { name: Sky News,           channel_id: UCoMdktPbSTixAyNGwb-UYkQ }
+videos_per_channel: 2
+max_videos: 8
